@@ -1,0 +1,120 @@
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+[data-theme="dark"] {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  .masthead {
+    background: #2a2a2a;
+    border-bottom-color: #3a3a3a;
+    
+    a {
+      color: #e0e0e0;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .page {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  .page__content {
+    color: #e0e0e0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f0f0;
+  }
+
+  .archive__item-title a {
+    color: #e0e0e0;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .sidebar {
+    background-color: #1a1a1a;
+    
+    a {
+      color: #e0e0e0;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .author__avatar img {
+    border-color: #3a3a3a;
+  }
+
+  .page__footer {
+    background-color: #2a2a2a;
+    color: #b0b0b0;
+    
+    a {
+      color: #b0b0b0;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  code {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  pre {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  blockquote {
+    border-left-color: #3a3a3a;
+    color: #b0b0b0;
+  }
+
+  table {
+    th, td {
+      border-color: #3a3a3a;
+    }
+    
+    thead {
+      background-color: #2a2a2a;
+    }
+    
+    tbody tr:nth-child(even) {
+      background-color: #222;
+    }
+  }
+
+  hr {
+    border-color: #3a3a3a;
+  }
+
+  .btn {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    
+    &:hover {
+      background-color: #4a4a4a;
+    }
+  }
+
+  iframe {
+    background-color: #2a2a2a;
+  }
+}
+
