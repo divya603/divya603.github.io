@@ -5,35 +5,87 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!--
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}-->
-
 {% include base_path %}
 
-<!-- New style rendering if publication random comment categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<style>
+.pub-year-group {
+  margin-bottom: 2rem;
+}
+
+.pub-year-header {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.pub-venue-label {
+  font-weight: bold;
+  color: #888;
+  font-size: 0.85rem;
+  padding-top: 0.15rem;
+  word-break: break-word;
+}
+
+.pub-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.pub-authors {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.pub-links a {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .pub-entry {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% assign pubs_by_year = site.publications | group_by_exp: "pub", "pub.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year_group in pubs_by_year %}
+<div class="pub-year-group">
+  <div class="pub-year-header">{{ year_group.name }}</div>
+  {% for pub in year_group.items %}
+  <div class="pub-entry">
+    <div class="pub-venue-label">{{ pub.venue_short | default: pub.venue }}</div>
+    <div class="pub-details">
+      <div class="pub-title">{{ pub.title }}</div>
+      {% if pub.authors %}
+      <div class="pub-authors">{{ pub.authors }}</div>
       {% endif %}
-      {% unless title_shown %}
-        {% if category[1].title %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% endif %}
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+      <div class="pub-links">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}">[Paper]</a>{% endif %}
+        {% if pub.slidesurl and pub.slidesurl != '' %}<a href="{{ pub.slidesurl }}">[Slides]</a>{% endif %}
+      </div>
+    </div>
+  </div>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+</div>
+{% endfor %}

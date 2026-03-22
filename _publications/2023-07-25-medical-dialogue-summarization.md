@@ -6,6 +6,8 @@ permalink: /publication/2023-07-25-medical-dialogue-summarization
 excerpt: 'This paper explores medical dialogue summarization using a linear support vector classification technique to streamline clinical conversations.'
 date: 2023-07-25
 venue: 'CLEF 2023: Conference and Labs of the Evaluation Forum'
+venue_short: 'CLEF 2023'
+authors: 'Dhanya Krishnan, Divya Srinivasan, and Kavitha Srinivasan'
 slidesurl: ''
 paperurl: 'https://ceur-ws.org/Vol-3497/paper-127.pdf'
 citation: 'Dhanya Krishnan, Divya Srinivasan, and Kavitha Srinivasan. (2023). &quot;Medical Dialogue Summarization Using Linear Support Vector Classification Technique.&quot; <i>CLEF 2023: Conference and Labs of the Evaluation Forum</i>.'

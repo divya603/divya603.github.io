@@ -6,6 +6,8 @@ permalink: /publication/2024-07-06-driving-style-profiling
 excerpt: 'This paper discusses driving style profiling using deep auto-encoders to enhance safety in urban and highway scenarios.'
 date: 2024-07-06
 venue: 'IEEE International Symposium on Measurements & Networking (M&N)'
+venue_short: 'IEEE M&N 2024'
+authors: 'Dhanya Krishnan, Divya Srinivasan, Balasubramanian V, Nagaradjane Prabagarane, Joannes Sam Mertens, Salvatore D. Cafiso, Laura Galluccio, Giacomo Morabito, Giuseppina Pappalardo'
 slidesurl: ''
 paperurl: 'http://dx.doi.org/10.1109/MN60932.2024.10615387'
 citation: 'Dhanya Krishnan, Divya Srinivasan, Balasubramanian V, Nagaradjane Prabagarane, Joannes Sam Mertens, Salvatore D. Cafiso, Laura Galluccio, Giacomo Morabito, Giuseppina Pappalardo. (2024). &quot;Driving Style Profiling using Deep Auto-Encoders for Safety Applications in Urban and Highway Scenarios.&quot; <i>IEEE International Symposium on Measurements &amp; Networking (M&amp;N)</i>.'
